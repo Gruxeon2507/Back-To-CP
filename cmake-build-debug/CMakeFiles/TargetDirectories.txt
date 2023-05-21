@@ -1,0 +1,3 @@
+F:/Back-To-CP/cmake-build-debug/CMakeFiles/Thang_11_Di_Hue.dir
+F:/Back-To-CP/cmake-build-debug/CMakeFiles/edit_cache.dir
+F:/Back-To-CP/cmake-build-debug/CMakeFiles/rebuild_cache.dir
