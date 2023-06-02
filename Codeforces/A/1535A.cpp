@@ -1,16 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 void solve(){
-    int n;
-    cin >> n;
-    int sum=1;
-    int lv=1;
-    while(sum<=n){
-        n-=sum;
-        lv++;
-        sum+=lv;
-    }
-    cout << lv-1 << endl;
+    int A,B,C,D;
+    cin >> A >> B >> C >> D;
+    cout << (min(A, B) < max(C, D) && min(C, D) < max(A, B)?"YES":"NO") << endl;
 
 }
 
