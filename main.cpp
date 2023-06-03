@@ -1,25 +1,28 @@
-#include <bits/stdc++.h>
-using namespace std;
-void solve(){
-    int n;
-    cin >> n;
-    int sum=1;
-    int lv=1;
-    while(sum<=n){
-        n-=sum;
-        lv++;
-        sum+=lv;
-    }
-    cout << lv-1 << endl;
-
-}
+#include <iostream>
+#include <cmath>
 
 int main() {
     int t;
-//    cin >> t;
-    t=1;
-    while(t--){
-        solve();
+    std::cin >> t;
+
+    while (t--) {
+        int n, k;
+        std::cin >> n >> k;
+
+        int minOnes;
+        if (n % k == 0) {
+            minOnes =ceil( n / k);
+        } else {
+            if(n%2==0)            minOnes = ceil( n / k) ;
+            else{
+                minOnes = ceil( n / k) + 1;
+
+            }
+
+        }
+
+        std::cout << minOnes << std::endl;
     }
+
     return 0;
 }
