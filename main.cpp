@@ -2,33 +2,30 @@
 using namespace std;
 
 void solve(){
-   int n,t;
-   cin >> n >> t;
-   if(n==1&&t==10){
-       cout << -1 << endl;
-       return;
+    int n;
+    cin >>n;
+   string s;
+   cin >> s;
+   int counto=0;
+   int countc=0;
+   int ans=0;
+   for(int i=0;i<s.length();i++){
+       if(s[i]=='('){
+           counto++;
+       }else{
+           countc++;
+           if(countc>counto){
+               countc--;
+               ans++;
+           }
+       };
    }
-
-   if(t==10){
-       cout << 1;
-       for(int i=0;i<n-1;i++){
-           cout << 0;
-       }
-       cout << endl;
-       return;
-   }
-   else{
-       for(int i=0;i<n;i++){
-           cout <<  t;
-       }
-       cout << endl;
-   }
-
+   cout << ans << endl;
 }
 int main() {
     int t;
-//    std::cin >> t;
-    t=1;
+    std::cin >> t;
+//    t=1;
     while (t--) {
         solve();
     }
