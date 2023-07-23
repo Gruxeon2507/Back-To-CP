@@ -1,33 +1,23 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void solve(){
-    int n;
-    cin >>n;
-   string s;
-   cin >> s;
-   int counto=0;
-   int countc=0;
-   int ans=0;
-   for(int i=0;i<s.length();i++){
-       if(s[i]=='('){
-           counto++;
-       }else{
-           countc++;
-           if(countc>counto){
-               countc--;
-               ans++;
-           }
-       };
-   }
-   cout << ans << endl;
-}
 int main() {
     int t;
-    std::cin >> t;
-//    t=1;
-    while (t--) {
-        solve();
+    cin >> t;
+    int arr[t];
+    int temp[t];
+    for(int i=0;i<t;i++){
+        cin >> arr[i];
+        temp[i]= arr[i];
+    }
+    sort(arr,arr+t);
+    for(int i=0;i<t;i++){
+        for(int j=0;j<t;j++){
+            if(temp[i]==arr[j]){
+                cout << j << " ";
+                break;
+            }
+        }
     }
 
     return 0;
