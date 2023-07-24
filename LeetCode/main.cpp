@@ -1,20 +1,31 @@
 #include <bits/stdc++.h>
 using namespace std;
+// Definition for a Node.
+class Node {
+public:
+    int val;
+    vector<Node*> children;
+
+    Node() {}
+
+    Node(int _val) {
+        val = _val;
+    }
+
+    Node(int _val, vector<Node*> _children) {
+        val = _val;
+        children = _children;
+    }
+};
+
 
 class Solution {
 public:
-    vector<int> sortArrayByParity(vector<int>& nums) {
-        vector<int> ans(nums.size());
-        int i=0,j=nums.size()-1;
-        for(int k=0;k<nums.size();k++){
-            if(nums[k]%2==0){
-                ans[i]=nums[k];
-                i++;
-            }else{
-                ans[j]=nums[k];
-                j--;
-            }
-        }
-        return ans;
+    void postorderTraversal(Node* root,vector<int> &v){
+        postorderTraversal(root.)
+    }
+    vector<int> postorder(Node* root) {
+        vector<int> ans;
+
     }
 };
