@@ -8,7 +8,7 @@ void solve() {
         if(s[i]>'4'){
             if(i==0 && s[i]=='9')continue;
             else
-            s[i]='0'+'9'-s[i];
+                s[i]='0'+'9'-s[i];
         }
     }
     cout << s << endl;
