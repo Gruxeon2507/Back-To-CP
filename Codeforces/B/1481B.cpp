@@ -20,10 +20,10 @@ void solve() {
                 }
                 break;
             }
-            if(i==k-1&&j==n-1){
-                cout << -1 << "\n";
-                return;
-            }
+        }
+        if(f==false){
+            cout << -1 << "\n";
+            return;
         }
     }
 }
