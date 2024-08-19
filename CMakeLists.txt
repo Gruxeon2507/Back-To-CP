@@ -3,4 +3,8 @@ project(Thang_11_Di_Hue)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Thang_11_Di_Hue main.cpp)
+add_executable(Thang_11_Di_Hue main.cpp
+        Codeforces/A/1950A.cpp
+        Codeforces/A/1915A.cpp
+        Codeforces/A/1985A.cpp
+        Codeforces/A/1926A.cpp)
