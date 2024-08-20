@@ -2,15 +2,21 @@
 using namespace std;
 
 void solve(){
-    string s;
-    cin >> s;
-    int a=0,b=0;
-    for(int i=0;i<5;i++){
-        if(s[i]=='A') a++;
-        else b++;
+    int n,m,k;
+    cin >> n >> m >> k;
+    int b[n],c[m];
+    for(int i=0;i<n;i++){
+        cin >> b[i];
     }
-    if(a<b) cout << "B\n";
-    else cout << "A\n";
+    int ans =0;
+
+    for(int i=0;i<m;i++){
+        cin >> c[i];
+        for(int j=0;j<n;j++){
+            if(c[i]+b[j]<=k) ans++;
+        }
+    }
+    cout << ans << endl;
 }
 
 int main(){
