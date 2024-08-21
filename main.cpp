@@ -1,19 +1,21 @@
 #include<iostream>
+#include <cmath>
 using namespace std;
 
 void solve(){
-    int n,m,k;
-    cin >> n >> m >> k;
-    int b[n],c[m];
+    int n,m;
+    cin >> n >> m;
+    string s;
+    cin >> s;
+    int a[100]={0};
     for(int i=0;i<n;i++){
-        cin >> b[i];
+        a[s[i]]++;
     }
-    int ans =0;
-
-    for(int i=0;i<m;i++){
-        cin >> c[i];
-        for(int j=0;j<n;j++){
-            if(c[i]+b[j]<=k) ans++;
+    int ans=0;
+    for(char i='A';i<='G';i++){
+        if(a[i]<m){
+            int temp = m-a[i];
+            ans+=temp;
         }
     }
     cout << ans << endl;
