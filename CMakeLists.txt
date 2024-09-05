@@ -25,4 +25,11 @@ add_executable(Thang_11_Di_Hue main.cpp
         Codeforces/A/1996A.cpp
         Codeforces/B/1950B.cpp
         Codeforces/A/1907A.cpp
-        Codeforces/A/1931A.cpp)
+        Codeforces/A/1931A.cpp
+        Codeforces/D/1850D.cpp
+        Codeforces/B/1971B.cpp
+        Codeforces/B/1980B.cpp
+        Codeforces/A/2000A.cpp
+        Codeforces/B/1921B.cpp
+        Codeforces/A/2009A.cpp
+        Codeforces/A/1919A.cpp)

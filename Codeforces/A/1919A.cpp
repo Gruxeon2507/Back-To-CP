@@ -3,15 +3,10 @@
 using namespace std;
 
 void solve(){
-   ll n;
-   cin >> n;
-   int t;
-   int max=0;
-   for(int i=1;i<=n;i++){
-        if(gcd(i,))
-   }
-   if(t==n) cout << t-1 << endl;
-   else cout << t << endl;
+    ll a,b;
+    cin >> a >> b;
+    if(abs(a-b)%2==0) cout << "Bob\n";
+    else cout << "Alice\n";
 }
 
 int main(){
