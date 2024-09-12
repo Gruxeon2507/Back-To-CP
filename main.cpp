@@ -1,20 +1,26 @@
 #include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
 #define ll long long
-
 using namespace std;
 
-
 void solve() {
-    int a,b,c,d;
-    cin >> a >> b >> c >> d;
-    int s = min(a,b);
-    int l = max(a,b);
-    if(c>s&&c<l&&d>s&&d<l){
-        cout << "NO\n";
-    }else{
-        cout << "YES\n";
-    }
-
+   int n;
+   cin >> n;
+   ll a[n];
+   for(int i=0;i<n;i++){
+       cin >> a[i];
+   }
+   ll max=a[0];
+   ll sum=0;
+   ll ans=0;
+   for(int i=0;i<n;i++){
+       sum+=a[i];
+       if(a[i]>max) max=a[i];
+       if(sum-max==max) ans++;
+   }
+   cout << ans << endl;
 }
 
 int main(){

@@ -24,6 +24,7 @@ public:
                 direction =(direction+1)%4;
             }
             x+=mv[direction][0];
+            y+=mv[direction][1];
         }
         return res;
     }
