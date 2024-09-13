@@ -9,8 +9,8 @@ using namespace std;
 void solve() {
     int n,m;
     cin >> n >> m;
-
-
+    if(n<m||(n-m)%2==1) cout << "NO\n";
+    else cout << "YES\n";
 }
 
 int main(){

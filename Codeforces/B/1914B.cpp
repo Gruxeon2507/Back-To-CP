@@ -7,9 +7,17 @@
 using namespace std;
 
 void solve() {
-    int n,m;
-    cin >> n >> m;
-
+    int n,k;
+    cin >> n >> k;
+    int t=n;
+    for(int i=0;i<t-1-k;i++){
+        cout << n << " ";
+        n--;
+    }
+    for(int i=1;i<=n;i++){
+        cout << i << " ";
+    }
+    cout << endl;
 
 }
 
