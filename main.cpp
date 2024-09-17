@@ -3,35 +3,53 @@
 #include <string>
 #include <algorithm>
 #include <iomanip>
+#include <map>
 #define ll long long
 using namespace std;
 
 void solve() {
-    int n;
+    ll n;
     cin >> n;
-    string s;
-    cin >> s;
-    string ans="";
-    //using push_back is a lot quicker than +
-    for(int i=0;i<n;i+=2){
-        ans.push_back(s[i]);
-        ans.push_back(s[i+1]);
-        if(i+2<n&&(s[i+2]=='b'||s[i+2]=='c'||s[i+2]=='d')){
-            if(i+3<n&&(s[i+3]!='a'&&s[i+3]!='e')||i+3>=n){
-                ans.push_back(s[i+2]);
-                i++;
+    vector<int> arr;
+    while(n>0){
+        arr.push_back(n%10);
+        n/=10;
+    }
+    reverse(arr.begin(),arr.end());
+    int s=arr.size();
+//    for(int i=0;i<s;i++){
+//        cout << arr[i] << " ";
+//    }
+//    cout << endl;
+    for(int i=0;i<s;i++){
+        for(int j=i+1;j<s;j++){
+            for(int k=j+1;k<s;k++){
+                if((100*arr[i]+10*arr[j]+arr[k])%8==0){
+                    cout << "YES\n";
+                    cout << 100*arr[i]+10*arr[j]+arr[k] << endl;
+                    return;
+                }
+            }
+            if((10*arr[i]+arr[j])%8==0){
+                cout << "YES\n";
+                cout << 10*arr[i]+arr[j] << endl;
+                return;
             }
         }
-        if(i<n-2) ans+='.';
+        if(arr[i]%8==0){
+            cout << "YES\n";
+            cout << arr[i] << endl;
+            return;
+        }
     }
-    cout << ans << endl;
+    cout << "NO\n";
 }
 
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
     int t=1;
-    cin >> t;
+//    cin >> t;
     for(int i=0;i<t;i++){
         solve();
     }
