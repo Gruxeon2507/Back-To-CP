@@ -18,9 +18,9 @@ void solve() {
     sort(arr.begin(),arr.end());
     if(n==1){
         if(arr[0]>=2){
-        cout << "NO\n";
-        return;
-    }else{}
+            cout << "NO\n";
+            return;
+        }else{}
         cout << "YES\n";
         return;
     }

@@ -8,27 +8,23 @@
 using namespace std;
 
 void solve() {
-    int n;
+    ll n;
     cin >> n;
     vector<ll> arr(n);
-    ll sum=0;
+    ll sum=0,neg=0;
     for(int i=0;i<n;i++){
         cin >> arr[i];
+        if(arr[i]<0){
+            arr[i]=-arr[i];
+            neg++;
+        }
+        sum+=arr[i];
     }
     sort(arr.begin(),arr.end());
-    if(n==1){
-        if(arr[0]>=2){
-        cout << "NO\n";
-        return;
-    }else{}
-        cout << "YES\n";
-        return;
+    if(neg%2==1){
+        sum-=2*arr[0];
     }
-    if(arr[n-1]-arr[n-2]>1){
-        cout << "NO\n";
-    }else{
-        cout << "YES\n";
-    }
+    cout << sum << endl;
 }
 
 int main(){

@@ -3,32 +3,19 @@
 #include <string>
 #include <algorithm>
 #include <iomanip>
-#include <unordered_map>
+#include <map>
 #define ll long long
 using namespace std;
 
 void solve() {
     int n;
     cin >> n;
-    vector<ll> arr(n);
-    ll sum=0;
+    vector<int> a(n);
     for(int i=0;i<n;i++){
-        cin >> arr[i];
+        cin >> a[i];
     }
-    sort(arr.begin(),arr.end());
-    if(n==1){
-        if(arr[0]>=2){
-        cout << "NO\n";
-        return;
-    }else{}
-        cout << "YES\n";
-        return;
-    }
-    if(arr[n-1]-arr[n-2]>1){
-        cout << "NO\n";
-    }else{
-        cout << "YES\n";
-    }
+    if(n==2&&a[1]-a[0]>1) cout << "YES\n";
+    else cout << "NO\n";
 }
 
 int main(){
@@ -41,4 +28,3 @@ int main(){
     }
     return 0;
 }
-
