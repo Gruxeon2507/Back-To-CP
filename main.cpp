@@ -10,32 +10,36 @@ using namespace std;
 void solve() {
     int n;
     cin >> n;
-    vector<ll> arr(n);
-    ll sum=0;
+    vector<int> x(n);
+    vector<int> h(n);
     for(int i=0;i<n;i++){
-        cin >> arr[i];
+        cin >> x[i] >> h[i];
     }
-    sort(arr.begin(),arr.end());
-    if(n==1){
-        if(arr[0]>=2){
-        cout << "NO\n";
-        return;
-    }else{}
-        cout << "YES\n";
+    bool left=true;
+    if(n<=2) {
+        cout << n << endl;
         return;
     }
-    if(arr[n-1]-arr[n-2]>1){
-        cout << "NO\n";
-    }else{
-        cout << "YES\n";
+    int ans=2;
+    for(int i=1;i<n-1;i++){
+        if(x[i]-h[i]>x[i-1]&&left){
+            left=false;
+            ans++;
+            continue;
+        }
+        if(x[i]+h[i]<x[i+1]){
+            left=true;
+            ans++;
+        }
     }
+    cout << ans << endl;
 }
 
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
     int t=1;
-    cin >> t;
+//    cin >> t;
     for(int i=0;i<t;i++){
         solve();
     }
