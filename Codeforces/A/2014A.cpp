@@ -4,21 +4,22 @@
 #include <algorithm>
 #include <iomanip>
 #include <unordered_map>
-#include <string>
 #define ll long long
 using namespace std;
 
 void solve() {
-    string s;
-    cin >> s;
+    int n,k;
+    cin >> n >> k;
+    vector<int>  a(n);
     int ans=0;
-    for(int i=0;i<s.size();){
-        unordered_map<char,int> m;
-        ans++;
-        while(m.size()<=3&&i<s.size()){
-            m[s[i]]++;
-            i++;
-        };
+    int coin =0;
+    for(int i=0;i<n;i++)  {
+        cin >> a[i];
+        if(a[i]>=k) coin+=a[i];
+        else if(a[i]==0&&coin>0){
+            ans++;
+            coin--;
+        }
     }
     cout << ans << endl;
 }

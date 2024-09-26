@@ -9,16 +9,13 @@
 using namespace std;
 
 void solve() {
-    string s;
-    cin >> s;
+    int l,r;
+    cin >> l >> r;
+    int step=0;
     int ans=0;
-    for(int i=0;i<s.size();){
-        unordered_map<char,int> m;
+    for(int i=l;i<=r;i+=step){
         ans++;
-        while(m.size()<=3&&i<s.size()){
-            m[s[i]]++;
-            i++;
-        };
+        step++;
     }
     cout << ans << endl;
 }

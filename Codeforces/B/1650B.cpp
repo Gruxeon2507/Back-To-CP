@@ -4,23 +4,16 @@
 #include <algorithm>
 #include <iomanip>
 #include <unordered_map>
-#include <string>
 #define ll long long
 using namespace std;
 
 void solve() {
-    string s;
-    cin >> s;
-    int ans=0;
-    for(int i=0;i<s.size();){
-        unordered_map<char,int> m;
-        ans++;
-        while(m.size()<=3&&i<s.size()){
-            m[s[i]]++;
-            i++;
-        };
-    }
-    cout << ans << endl;
+    ll l,r,a;
+    cin >> l >> r >> a;
+    ll ans = r/a*a-1;
+    ll t = r/a + r% a;
+    if(ans>=l)  cout << max(t,ans/a+ans%a) << endl;
+    else cout << t << endl;
 }
 
 int main(){
