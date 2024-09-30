@@ -9,18 +9,22 @@
 using namespace std;
 
 void solve() {
-    int n,m;
-    cin >> n >> m;
-    string a,b;
-    cin >> a >> b;
+    string s;
+    cin >> s;
+    int n = s.length();
     int ans=0;
-    int j=0;
-    for(int i=0;i<m;i++){
-        if(b[i]==a[j]){
-            ans++;
-            j++;
-            if(j>=n)break;
+    for(int i=0;i<n;i++){
+        unordered_map<char,int> m;
+        while(m.size()<=3&&i<n){
+            if(m.size()==3&&m[s[i]]==0) break;
+            m[s[i]]++;
+//            cout << m.size();
+//            cout<< s[i];
+            i++;
         }
+        if(i<n)i--;
+//        cout << endl;
+        ans++;
     }
     cout << ans << endl;
 }

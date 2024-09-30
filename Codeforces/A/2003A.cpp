@@ -9,20 +9,12 @@
 using namespace std;
 
 void solve() {
-    int n,m;
-    cin >> n >> m;
-    string a,b;
-    cin >> a >> b;
-    int ans=0;
-    int j=0;
-    for(int i=0;i<m;i++){
-        if(b[i]==a[j]){
-            ans++;
-            j++;
-            if(j>=n)break;
-        }
-    }
-    cout << ans << endl;
+    int n;
+    cin >> n;
+    string s;
+    cin >> s;
+    if(s[0]!=s[n-1]) cout << "YES\n";
+    else cout << "NO\n";
 }
 
 int main(){

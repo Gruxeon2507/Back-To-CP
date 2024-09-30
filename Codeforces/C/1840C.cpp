@@ -9,18 +9,20 @@
 using namespace std;
 
 void solve() {
-    int n,m;
-    cin >> n >> m;
-    string a,b;
-    cin >> a >> b;
-    int ans=0;
-    int j=0;
-    for(int i=0;i<m;i++){
-        if(b[i]==a[j]){
-            ans++;
-            j++;
-            if(j>=n)break;
+    ll n,k,q;
+    cin >> n >> k >> q;
+    vector<ll> a(n);
+    for(int i=0;i<n;i++) cin >> a[i];
+    ll ans=0;
+    for(int i=0;i<n;i++){
+        int count=0;
+        while(a[i]<=q&&i<n){
+            count++;
+            i++;
         }
+        if(count>0) i--;
+//        cout << count << " " << i <<endl;
+        if(count>=k) ans+=((count-k+1)+1)*(count-k+1)/2;
     }
     cout << ans << endl;
 }
