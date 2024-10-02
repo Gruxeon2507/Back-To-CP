@@ -10,9 +10,18 @@
 using namespace std;
 
 void solve() {
-    int n;
-    cin >> n;
-    
+    int x,y;
+    cin >> x >> y;
+    vector<string> a(x);
+    for(int i=0;i<x;i++) cin >> a[i];
+    int ans=0;
+    for(int i=0;i<x;i++){
+        if(a[i][y-1]=='R')ans++;
+    }
+    for(int i=0;i<y;i++){
+        if(a[x-1][i]=='D')ans++;
+    }
+    cout << ans << endl;
 }
 
 
