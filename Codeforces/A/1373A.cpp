@@ -7,16 +7,24 @@
 #include <map>
 #include <string>
 #include <stack>
-#include <cmath>
 #define ll long long
 using namespace std;
 
-int a[10000][10000];
-
 void solve() {
-    int n;
-    cin >> n;
-
+    ll a,b,c;
+    cin >> a >> b >> c;
+    ll ans1,ans2;
+    if(a*b<=c){
+        ans2=-1;
+    }else{
+        ans2=b;
+    }
+    if(a<c){
+        ans1=1;
+    }else{
+        ans1=-1;
+    }
+    cout << ans1 << " " << ans2 << endl;
 }
 
 

@@ -6,17 +6,29 @@
 #include <unordered_map>
 #include <map>
 #include <string>
-#include <stack>
-#include <cmath>
 #define ll long long
 using namespace std;
-
-int a[10000][10000];
 
 void solve() {
     int n;
     cin >> n;
-
+    ll mn=1e9;
+    ll sum=0;
+    vector<ll> a;
+    for(int i=0;i<n;i++){
+        int m;
+        cin >> m;
+        vector<ll> b(m);
+        for(int j=0;j<m;j++){
+            cin >> b[j];
+        }
+        sort(b.begin(),b.end());
+        a.push_back(b[1]);
+        sum+=b[1];
+        if(mn>b[0]) mn=b[0];
+    }
+    sort(a.begin(),a.end());
+    cout << sum+mn-a[0] << endl;
 }
 
 

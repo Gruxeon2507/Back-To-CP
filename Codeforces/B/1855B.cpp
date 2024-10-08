@@ -11,11 +11,15 @@
 #define ll long long
 using namespace std;
 
-int a[10000][10000];
-
 void solve() {
-    int n;
+    ll n;
     cin >> n;
+    for(int i=1;i<=n+10;i++){
+        if(n%i!=0){
+            cout << i-1 << endl;
+            return;
+        }
+    }
 
 }
 
