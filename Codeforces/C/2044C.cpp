@@ -2,9 +2,13 @@
 using namespace std;
 
 void solve() {
-    int n,k;
-    cin >> n >> k;
-    
+    int m,a,b,c;
+    cin >> m >> a >> b >> c;
+    int ans = 0;
+    ans+=min(m,a)+min(m,b);
+    int la = m - min(m,a),lb = m - min(m,b);
+    ans+=min(la+lb,c);
+    cout << ans << endl;
 }
 
 int main() {

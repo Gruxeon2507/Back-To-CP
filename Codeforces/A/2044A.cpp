@@ -2,9 +2,9 @@
 using namespace std;
 
 void solve() {
-    int n,k;
-    cin >> n >> k;
-    
+    int n;
+    cin >> n;
+    cout << n-1 << "\n";
 }
 
 int main() {
